@@ -13,9 +13,9 @@ In the original SRED paper, no timestamps were used in managing the zombie list.
  **Timestamp-Based Zombie Tracking:**  
   Each zombie flow now stores a timestamp for when it was last updated.
 
- **Dynamic Overwrite Probability (`poverwrite`):**  
-  Instead of using a fixed probability to overwrite a zombie when there is no hit, we dynamically adjust `poverwrite` based on the age of the existing zombie.  
-  - **Older zombies → higher `poverwrite`**
-  - **Newer zombies → lower `poverwrite`**
+ **Dynamic Overwrite Probability (`p<sub>overwrite</sub>`):**  
+  Instead of using a fixed probability to overwrite a zombie when there is no hit, we dynamically adjust `p<sub>overwrite</sub>` based on the age of the existing zombie.  
+  - **Older zombies → higher `p<sub>overwrite</sub>`**
+  - **Newer zombies → lower `p<sub>overwrite</sub>`**
 
 This timestamp-aware logic helps better track and penalize active flows, improving fairness and responsiveness in TCP networks.
